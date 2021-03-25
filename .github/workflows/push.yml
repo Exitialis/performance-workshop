@@ -1,0 +1,27 @@
+name: Minimal setup
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  benchmark:
+    name: Performance regression check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v1
+      # Run benchmark with `go test -bench` and stores the output to a file
+      - name: Run benchmark
+        run: go test -bench 'BenchmarkFib20' | tee output.txt
+      # gh-pages branch is updated and pushed automatically with extracted benchmark data
+      - name: Store benchmark result
+        uses: rhysd/github-action-benchmark@v1
+        with:
+          name: My Project Go Benchmark
+          tool: 'go'
+          output-file-path: output.txt
+          # Personal access token to deploy GitHub Pages branch
+          github-token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          # Push and deploy GitHub pages branch automatically
+          auto-push: true
