@@ -14,22 +14,14 @@ jobs:
       # Run benchmark with `go test -bench` and stores the output to a file
       - name: Run benchmark
         run: go test -bench 'BenchmarkFib20' | tee output.txt
-      # Download previous benchmark result from cache (if exists)
-      - name: Download previous benchmark data
-        uses: actions/cache@v1
-        with:
-          path: ./cache
-          key: ${{ runner.os }}-benchmark
-      # Run `github-action-benchmark` action
+      # gh-pages branch is updated and pushed automatically with extracted benchmark data
       - name: Store benchmark result
         uses: rhysd/github-action-benchmark@v1
         with:
-          # What benchmark tool the output.txt came from
+          name: My Project Go Benchmark
           tool: 'go'
-          # Where the output from the benchmark tool is stored
           output-file-path: output.txt
-          # Where the previous data file is stored
-          external-data-json-path: ./cache/benchmark-data.json
-          # Workflow will fail when an alert happens
-          fail-on-alert: true
-      # Upload the updated cache file for the next job by actions/cache
+          # Personal access token to deploy GitHub Pages branch
+          github-token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
+          # Push and deploy GitHub pages branch automatically
+          auto-push: true
