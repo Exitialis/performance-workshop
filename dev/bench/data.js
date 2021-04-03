@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1617455936458,
+  "lastUpdate": 1617455939045,
   "repoUrl": "https://github.com/Exitialis/performance-workshop",
   "entries": {
     "My Project Go Benchmark": [
@@ -110,6 +110,32 @@ window.BENCHMARK_DATA = {
           {
             "name": "BenchmarkFib20",
             "value": 954331301,
+            "unit": "ns/op",
+            "extra": "2 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "name": "Exitialis",
+            "username": "Exitialis"
+          },
+          "committer": {
+            "name": "Exitialis",
+            "username": "Exitialis"
+          },
+          "id": "6134b76d728983947a839c5233d79a6a968c7955",
+          "message": "Test",
+          "timestamp": "2021-04-03T13:18:18Z",
+          "url": "https://github.com/Exitialis/performance-workshop/pull/2/commits/6134b76d728983947a839c5233d79a6a968c7955"
+        },
+        "date": 1617455938606,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib20",
+            "value": 863244418,
             "unit": "ns/op",
             "extra": "2 times\n2 procs"
           }
