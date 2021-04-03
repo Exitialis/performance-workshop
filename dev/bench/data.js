@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1617455919561,
+  "lastUpdate": 1617455936458,
   "repoUrl": "https://github.com/Exitialis/performance-workshop",
   "entries": {
     "My Project Go Benchmark": [
@@ -84,6 +84,34 @@ window.BENCHMARK_DATA = {
             "value": 696095,
             "unit": "ns/op",
             "extra": "2000 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ipneschadin@avito.ru",
+            "name": "Ivan Neschadin"
+          },
+          "committer": {
+            "email": "ipneschadin@avito.ru",
+            "name": "Ivan Neschadin"
+          },
+          "distinct": true,
+          "id": "6134b76d728983947a839c5233d79a6a968c7955",
+          "message": "Merge branch 'master' of github.com:Exitialis/performance-workshop into test",
+          "timestamp": "2021-04-03T16:18:25+03:00",
+          "tree_id": "c1dbad5d3eb68748dec24f9435872a3dfb8b7275",
+          "url": "https://github.com/Exitialis/performance-workshop/commit/6134b76d728983947a839c5233d79a6a968c7955"
+        },
+        "date": 1617455935954,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib20",
+            "value": 954331301,
+            "unit": "ns/op",
+            "extra": "2 times\n2 procs"
           }
         ]
       }
