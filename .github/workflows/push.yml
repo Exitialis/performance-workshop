@@ -1,11 +1,11 @@
 name: Minimal setup
 on:
   push:
-    branches:
-      - main
+    branches-ignore:
+      - gh-pages
   pull_request:
-    branches:
-      - main
+    branches-ignore:
+      - gh-pages
 
 jobs:
   benchmark:
