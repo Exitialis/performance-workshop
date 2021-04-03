@@ -2,7 +2,10 @@ name: Minimal setup
 on:
   push:
     branches:
-      - master
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   benchmark:
@@ -25,3 +28,4 @@ jobs:
           github-token: ${{ secrets.PERSONAL_GITHUB_TOKEN }}
           # Push and deploy GitHub pages branch automatically
           auto-push: true
+          comment-always: true
