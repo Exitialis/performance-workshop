@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1617455939045,
+  "lastUpdate": 1617456021776,
   "repoUrl": "https://github.com/Exitialis/performance-workshop",
   "entries": {
     "My Project Go Benchmark": [
@@ -138,6 +138,34 @@ window.BENCHMARK_DATA = {
             "value": 863244418,
             "unit": "ns/op",
             "extra": "2 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ipneschadin@avito.ru",
+            "name": "Ivan Neschadin"
+          },
+          "committer": {
+            "email": "ipneschadin@avito.ru",
+            "name": "Ivan Neschadin"
+          },
+          "distinct": true,
+          "id": "55da8eb33579d44482c3cb0e99cb67439b44b2d5",
+          "message": "fix double run for workflow",
+          "timestamp": "2021-04-03T16:19:53+03:00",
+          "tree_id": "1a30e17e1cbfa94d56fa6616f31a2d534d33467d",
+          "url": "https://github.com/Exitialis/performance-workshop/commit/55da8eb33579d44482c3cb0e99cb67439b44b2d5"
+        },
+        "date": 1617456021316,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib20",
+            "value": 707326,
+            "unit": "ns/op",
+            "extra": "2000 times\n2 procs"
           }
         ]
       }
