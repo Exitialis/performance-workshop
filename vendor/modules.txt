@@ -1,14 +1,27 @@
 # github.com/antonmedv/expr v1.8.9
 ## explicit
+# github.com/davecgh/go-spew v1.1.1
+github.com/davecgh/go-spew/spew
+# github.com/gorilla/mux v1.8.0
+## explicit
+github.com/gorilla/mux
 # github.com/mattn/go-runewidth v0.0.10
 ## explicit
 # github.com/olekukonko/tablewriter v0.0.5
 ## explicit
+# github.com/pmezard/go-difflib v1.0.0
+github.com/pmezard/go-difflib/difflib
 # github.com/rivo/uniseg v0.2.0
 ## explicit
+# github.com/stretchr/testify v1.7.0
+## explicit
+github.com/stretchr/testify/assert
+github.com/stretchr/testify/require
 # go.bobheadxi.dev/gobenchdata v1.0.1
 ## explicit
 # golang.org/x/net v0.0.0-20210324205630-d1beb07c2056
 ## explicit
 # gopkg.in/yaml.v2 v2.4.0
 ## explicit
+# gopkg.in/yaml.v3 v3.0.0-20200313102051-9f266ea9e77c
+gopkg.in/yaml.v3

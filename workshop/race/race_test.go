@@ -1,4 +1,4 @@
-package main
+package race
 
 import (
 	"fmt"
@@ -8,6 +8,9 @@ import (
 	"time"
 )
 
+// Предположим, вам понадобилось закэшировать ответы внешнего сервиса. Но вы знаете, что данные в этом сервисе меняются редко
+// Предположим, что у вас интернет-магазин, на котором имеется каталог.
+// Этот сервис может хранить id категорий товаров, которые есть на вашем сайте и кэшировать их на 1 минуту.
 type temp struct {
 	m map[int64]bool
 	lock sync.RWMutex
@@ -38,12 +41,11 @@ func (t *temp) getMap() map[int64]bool {
 }
 
 func BenchmarkM(b *testing.B) {
+	b.ReportAllocs()
 	m := newTemp()
 	var t map[int64]bool
 	for n := 0; n < b.N; n++ {
 		t = m.getMap()
 	}
-	m.lock.RLock()
 	fmt.Println(t)
-	m.lock.RUnlock()
 }
