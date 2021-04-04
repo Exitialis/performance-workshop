@@ -1,0 +1,7 @@
+goos: darwin
+goarch: amd64
+pkg: github.com/exitialis/workshop/workshop/slices
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+BenchmarkAppend-12    	18281832	        60.72 ns/op	      80 B/op	       1 allocs/op
+PASS
+ok  	github.com/exitialis/workshop/workshop/slices	1.394s
