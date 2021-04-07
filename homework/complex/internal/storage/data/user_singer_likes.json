@@ -1,0 +1,402 @@
+[
+  {
+    "userId": 15,
+    "singer_id": 17
+  },
+  {
+    "userId": 3,
+    "singer_id": 13
+  },
+  {
+    "userId": 2,
+    "singer_id": 13
+  },
+  {
+    "userId": 13,
+    "singer_id": 10
+  },
+  {
+    "userId": 12,
+    "singer_id": 5
+  },
+  {
+    "userId": 20,
+    "singer_id": 9
+  },
+  {
+    "userId": 10,
+    "singer_id": 1
+  },
+  {
+    "userId": 20,
+    "singer_id": 9
+  },
+  {
+    "userId": 6,
+    "singer_id": 19
+  },
+  {
+    "userId": 6,
+    "singer_id": 0
+  },
+  {
+    "userId": 6,
+    "singer_id": 11
+  },
+  {
+    "userId": 16,
+    "singer_id": 10
+  },
+  {
+    "userId": 6,
+    "singer_id": 9
+  },
+  {
+    "userId": 15,
+    "singer_id": 20
+  },
+  {
+    "userId": 2,
+    "singer_id": 3
+  },
+  {
+    "userId": 0,
+    "singer_id": 14
+  },
+  {
+    "userId": 16,
+    "singer_id": 10
+  },
+  {
+    "userId": 4,
+    "singer_id": 18
+  },
+  {
+    "userId": 7,
+    "singer_id": 3
+  },
+  {
+    "userId": 18,
+    "singer_id": 12
+  },
+  {
+    "userId": 15,
+    "singer_id": 12
+  },
+  {
+    "userId": 14,
+    "singer_id": 11
+  },
+  {
+    "userId": 5,
+    "singer_id": 5
+  },
+  {
+    "userId": 6,
+    "singer_id": 12
+  },
+  {
+    "userId": 3,
+    "singer_id": 5
+  },
+  {
+    "userId": 1,
+    "singer_id": 9
+  },
+  {
+    "userId": 5,
+    "singer_id": 6
+  },
+  {
+    "userId": 20,
+    "singer_id": 18
+  },
+  {
+    "userId": 10,
+    "singer_id": 18
+  },
+  {
+    "userId": 0,
+    "singer_id": 15
+  },
+  {
+    "userId": 15,
+    "singer_id": 11
+  },
+  {
+    "userId": 5,
+    "singer_id": 18
+  },
+  {
+    "userId": 3,
+    "singer_id": 9
+  },
+  {
+    "userId": 8,
+    "singer_id": 16
+  },
+  {
+    "userId": 13,
+    "singer_id": 7
+  },
+  {
+    "userId": 8,
+    "singer_id": 16
+  },
+  {
+    "userId": 16,
+    "singer_id": 16
+  },
+  {
+    "userId": 9,
+    "singer_id": 12
+  },
+  {
+    "userId": 13,
+    "singer_id": 6
+  },
+  {
+    "userId": 19,
+    "singer_id": 17
+  },
+  {
+    "userId": 11,
+    "singer_id": 16
+  },
+  {
+    "userId": 9,
+    "singer_id": 16
+  },
+  {
+    "userId": 17,
+    "singer_id": 3
+  },
+  {
+    "userId": 3,
+    "singer_id": 2
+  },
+  {
+    "userId": 17,
+    "singer_id": 5
+  },
+  {
+    "userId": 10,
+    "singer_id": 20
+  },
+  {
+    "userId": 8,
+    "singer_id": 2
+  },
+  {
+    "userId": 15,
+    "singer_id": 16
+  },
+  {
+    "userId": 2,
+    "singer_id": 8
+  },
+  {
+    "userId": 7,
+    "singer_id": 2
+  },
+  {
+    "userId": 12,
+    "singer_id": 19
+  },
+  {
+    "userId": 20,
+    "singer_id": 12
+  },
+  {
+    "userId": 20,
+    "singer_id": 4
+  },
+  {
+    "userId": 11,
+    "singer_id": 3
+  },
+  {
+    "userId": 12,
+    "singer_id": 10
+  },
+  {
+    "userId": 0,
+    "singer_id": 8
+  },
+  {
+    "userId": 6,
+    "singer_id": 16
+  },
+  {
+    "userId": 16,
+    "singer_id": 10
+  },
+  {
+    "userId": 18,
+    "singer_id": 13
+  },
+  {
+    "userId": 16,
+    "singer_id": 15
+  },
+  {
+    "userId": 10,
+    "singer_id": 6
+  },
+  {
+    "userId": 12,
+    "singer_id": 14
+  },
+  {
+    "userId": 7,
+    "singer_id": 13
+  },
+  {
+    "userId": 11,
+    "singer_id": 1
+  },
+  {
+    "userId": 11,
+    "singer_id": 5
+  },
+  {
+    "userId": 0,
+    "singer_id": 11
+  },
+  {
+    "userId": 2,
+    "singer_id": 1
+  },
+  {
+    "userId": 1,
+    "singer_id": 15
+  },
+  {
+    "userId": 10,
+    "singer_id": 10
+  },
+  {
+    "userId": 9,
+    "singer_id": 1
+  },
+  {
+    "userId": 11,
+    "singer_id": 14
+  },
+  {
+    "userId": 1,
+    "singer_id": 1
+  },
+  {
+    "userId": 8,
+    "singer_id": 17
+  },
+  {
+    "userId": 11,
+    "singer_id": 18
+  },
+  {
+    "userId": 19,
+    "singer_id": 0
+  },
+  {
+    "userId": 0,
+    "singer_id": 5
+  },
+  {
+    "userId": 9,
+    "singer_id": 2
+  },
+  {
+    "userId": 0,
+    "singer_id": 5
+  },
+  {
+    "userId": 3,
+    "singer_id": 10
+  },
+  {
+    "userId": 12,
+    "singer_id": 6
+  },
+  {
+    "userId": 16,
+    "singer_id": 9
+  },
+  {
+    "userId": 4,
+    "singer_id": 5
+  },
+  {
+    "userId": 6,
+    "singer_id": 7
+  },
+  {
+    "userId": 0,
+    "singer_id": 12
+  },
+  {
+    "userId": 13,
+    "singer_id": 4
+  },
+  {
+    "userId": 13,
+    "singer_id": 3
+  },
+  {
+    "userId": 14,
+    "singer_id": 10
+  },
+  {
+    "userId": 13,
+    "singer_id": 10
+  },
+  {
+    "userId": 17,
+    "singer_id": 12
+  },
+  {
+    "userId": 17,
+    "singer_id": 1
+  },
+  {
+    "userId": 5,
+    "singer_id": 19
+  },
+  {
+    "userId": 16,
+    "singer_id": 14
+  },
+  {
+    "userId": 15,
+    "singer_id": 11
+  },
+  {
+    "userId": 13,
+    "singer_id": 5
+  },
+  {
+    "userId": 14,
+    "singer_id": 4
+  },
+  {
+    "userId": 5,
+    "singer_id": 15
+  },
+  {
+    "userId": 10,
+    "singer_id": 18
+  },
+  {
+    "userId": 11,
+    "singer_id": 12
+  },
+  {
+    "userId": 15,
+    "singer_id": 14
+  },
+  {
+    "userId": 16,
+    "singer_id": 4
+  }
+]

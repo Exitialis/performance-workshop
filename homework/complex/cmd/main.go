@@ -3,7 +3,13 @@ package main
 import (
 	"fmt"
 	"github.com/exitialis/workshop/homework/complex/handlers"
+	"github.com/exitialis/workshop/homework/complex/internal/service/albums"
+	"github.com/exitialis/workshop/homework/complex/internal/service/playlists"
+	"github.com/exitialis/workshop/homework/complex/internal/service/singers"
+	"github.com/exitialis/workshop/homework/complex/internal/service/songs"
+	storage2 "github.com/exitialis/workshop/homework/complex/internal/storage"
 	"github.com/gorilla/mux"
+	_ "net/http/pprof"
 	"log"
 	"net/http"
 )
@@ -23,9 +29,9 @@ func main() {
 	}()
 	r := mux.NewRouter()
 
-	h := handlers.ProfileHandler{}
+	storage := storage2.NewStorage()
 
-	r.HandleFunc("/", h.Handle)
+	r.HandleFunc("/", handlers.New(albums.New(storage), playlists.New(storage), singers.New(storage), songs.New(storage), storage).Handle)
 
 	err := http.ListenAndServe(":8890", r)
 	if err != nil {
