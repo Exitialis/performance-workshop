@@ -51,19 +51,16 @@ type Song struct {
 	Length uint16  `json:"length"` // длина трека в секундах
 	Album Album `json:"album"`
 	Artist Artist `json:"artist"`
-	Liked bool `json:"liked"`
 }
 
 type Album struct {
 	Name string `json:"name"`
 	Logo string `json:"logo"` // Ссылка на файл с картинкой альбома
-	Liked bool `json:"liked"`
 }
 
 type Artist struct {
 	Name string
 	Logo string `json:"logo"` // Ссылка на файл с картинкой исполнителя
-	Liked bool `json:"liked"`
 }
 
 type ErrorResponse struct {
@@ -173,14 +170,11 @@ func (h *FavoritePlaylistsHandler) Handle(w http.ResponseWriter, req *http.Reque
 				Album:  Album{
 					Name:  album.Name,
 					Logo:  album.Logo,
-					Liked: false,
 				},
 				Artist: Artist{
 					Name:  artist.Name,
 					Logo:  artist.Logo,
-					Liked: false,
 				},
-				Liked:  false,
 			})
 		}
 
@@ -232,74 +226,3 @@ func unauthorized(w http.ResponseWriter) {
 func notFound(w http.ResponseWriter) {
 	errResponse(404, "Not found", w)
 }
-//{
-//'repeat(20)': {
-//_id: '{{index()}}',
-//username: '{{lorem(3, "words")}}',
-//}
-//},
-//{
-//'repeat(1000)': {
-//userId: '{{integer(0, 20)}}',
-//songId: '{{integer(0, 100)}}',
-//}
-//},
-//{
-//'repeat(100)': {
-//userId: '{{integer(0, 20)}}',
-//singer_id: '{{integer(0, 100)}}',
-//}
-//},
-//{
-//'repeat()': {
-//userId: '{{integer(0, 20)}}',
-//album_id: '{{integer(0, 100)}}',
-//}
-//},
-//{
-//'repeat(20)': {
-//userId: '{{integer(0, 20)}}',
-//playlist_id: '{{integer(0, 100)}}',
-//}
-//},
-//// Playlist?
-//{
-//'repeat(20)': {
-//_id: '{{index()}}',
-//userId: '{{integer(0, 20)}}',
-//logo: 'http://placehold.it/32x32',
-//}
-//},
-//// Playlist_songs
-//{
-//'repeat(1000)': {
-//playlist_id: '{{integer(0, 20)}}',
-//song_id: '{{integer(0, 300)}}',
-//}
-//},
-//// Album
-//{
-//'repeat(50)': {
-//_id: '{{index()}}',
-//name: '{{lorem(3, "words")}}',
-//logo: 'http://placehold.it/32x32',
-//}
-//},
-//// Songs
-//{
-//'repeat(300)': {
-//_id: '{{index()}}',
-//name: '{{lorem(3, "words")}}',
-//length: '{{integer(100, 900)}}',
-//album: '{{integer(0, 100)}}',
-//artist: '{{integer(0, 100)}}',
-//}
-//},
-//// Artist
-//{
-//'repeat(10)': {
-//_id: '{{index()}}',
-//name: '{{lorem(3, "words")}}',
-//logo: 'http://placehold.it/32x32',
-//}
-//},

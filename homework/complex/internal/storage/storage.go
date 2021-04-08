@@ -2,10 +2,10 @@ package storage
 
 import (
 	"encoding/json"
+	"golang.org/x/sync/errgroup"
 	"log"
 	"os"
 	"path"
-	"golang.org/x/sync/errgroup"
 )
 
 type Storage struct {
@@ -31,7 +31,7 @@ type Song struct {
 	ID uint64 `json:"_id"`
 	Name string
 	Length uint16
-	AlbumID uint64
+	AlbumID uint64 `json:"album"`
 	Artist uint64
 }
 
@@ -84,7 +84,7 @@ func NewStorage() *Storage {
 		songs:             make(map[uint64]Song),
 		singers:           make(map[uint64]Singer),
 		albums:            make(map[uint64]Album),
-		playlists:          make(map[uint64]Playlist),
+		playlists:         make(map[uint64]Playlist),
 		users:             make(map[uint64]User),
 		playlistSongs:     make(map[uint64][]uint64),
 		userSongsLikes:    make(map[uint64][]uint64),
@@ -237,8 +237,8 @@ func (s *Storage) loadPlaylistSongs() error {
 }
 
 func readData(filename string) ([]byte, error) {
-	var dir string
-	dir, _ = os.Getwd()
+	pwd, _ := os.Getwd()
+	file := path.Join(pwd, "../data", filename)
 
-	return os.ReadFile(path.Join(dir, "homework/complex/internal/storage/data", filename))
+	return os.ReadFile(file)
 }
