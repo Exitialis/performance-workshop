@@ -4,8 +4,13 @@ package intersect
 // Метод должен возвращать пересечение этих массивов (одинаковые элементы в обоих массивах)
 // Есть ли способ сделать оптимальнее?
 func SliceIntersect(a, b []int64) []int64 {
-	var result []int64
-	out:
+	resSize := len(a)
+	if len(a) > len(b) {
+		resSize = len(b)
+	}
+
+	result := make([]int64, 0, resSize)
+out:
 	for _, valA := range a {
 		for _, valB := range b {
 			if valA == valB {
