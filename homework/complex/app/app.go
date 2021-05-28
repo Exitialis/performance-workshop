@@ -4,11 +4,12 @@ import (
 	"context"
 	"fmt"
 	"github.com/exitialis/workshop/homework/complex/handlers"
-	"github.com/exitialis/workshop/homework/complex/internal/service/albums"
-	"github.com/exitialis/workshop/homework/complex/internal/service/playlists"
-	"github.com/exitialis/workshop/homework/complex/internal/service/singers"
-	"github.com/exitialis/workshop/homework/complex/internal/service/songs"
-	storage2 "github.com/exitialis/workshop/homework/complex/internal/storage"
+	lru2 "github.com/exitialis/workshop/homework/complex/internal/cache"
+	"github.com/exitialis/workshop/homework/complex/internal/clients/calltracking"
+	phones2 "github.com/exitialis/workshop/homework/complex/internal/clients/phones"
+	phones_gateway "github.com/exitialis/workshop/homework/complex/internal/gateway"
+	calltracking2 "github.com/exitialis/workshop/homework/complex/internal/service/calltracking"
+	"github.com/exitialis/workshop/homework/complex/internal/service/phones"
 	"github.com/gorilla/mux"
 	"log"
 	"net/http"
@@ -24,12 +25,17 @@ func StartApp(ctx context.Context, withPprof bool) {
 	}()
 	router := mux.NewRouter()
 
-	storage := storage2.NewStorage()
+	phonesClient := phones2.NewPhonesClient()
+	phonesService := phones.NewPhonesService(phonesClient)
+	calltrackingClient := calltracking.NewCalltrackingClient()
+	calltrackingService := calltracking2.NewCalltrackingService(calltrackingClient)
+	lru := lru2.NewLruCache()
+	phonesGateway := phones_gateway.NewPhonesGateway(phonesService, calltrackingService, lru, ctx)
 	if withPprof {
 		go ServePProf(ctx)
 	}
 
-	router.HandleFunc("/", handlers.New(albums.New(storage), playlists.New(storage), singers.New(storage), songs.New(storage), storage).Handle)
+	router.HandleFunc("/getPhone", handlers.New(phonesGateway).Handle)
 
 	log.Println("start server on :8890")
 

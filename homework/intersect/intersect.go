@@ -16,3 +16,19 @@ func SliceIntersect(a, b []int64) []int64 {
 	}
 	return result
 }
+
+func SliceIntersectMap(a, b []int64) []int64 {
+	m := make(map[int64]struct{}, len(a))
+	for _, item := range a {
+		m[item] = struct{}{}
+	}
+
+	result := make([]int64, 0, len(a))
+	for _, item := range b {
+		if _, ok := m[item]; ok {
+			result = append(result, item)
+		}
+	}
+
+	return result
+}

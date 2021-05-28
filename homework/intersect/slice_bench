@@ -1,0 +1,14 @@
+goos: darwin
+goarch: amd64
+pkg: github.com/exitialis/workshop/homework/intersect
+cpu: Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+BenchmarkIntersect-12    	      10	 113316565 ns/op	   16384 B/op	       0 allocs/op
+BenchmarkIntersect-12    	       9	 126295529 ns/op	   18204 B/op	       0 allocs/op
+BenchmarkIntersect-12    	       8	 160433742 ns/op	   20480 B/op	       0 allocs/op
+BenchmarkIntersect-12    	       9	 116654832 ns/op	   18204 B/op	       0 allocs/op
+BenchmarkIntersect-12    	      10	 112082098 ns/op	   16384 B/op	       0 allocs/op
+BenchmarkIntersect-12    	       9	 111475115 ns/op	   18204 B/op	       0 allocs/op
+BenchmarkIntersect-12    	       9	 111824325 ns/op	   18204 B/op	       0 allocs/op
+BenchmarkIntersect-12    	      10	 111871576 ns/op	   16384 B/op	       0 allocs/op
+PASS
+ok  	github.com/exitialis/workshop/homework/intersect	10.114s
